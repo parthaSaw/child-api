@@ -10,7 +10,8 @@ module.exports=(req,res,next)=>{
         data.isTransaction = true
     }
 
-    axios.post('http://localhost:3000/login',data)
+    axios.post('http://35.154.213.118:3000/login',data)
+    // axios.post('http://localhost:3000/login',data)
     .then((data)=>{
         data = data.data
         if(data.status){

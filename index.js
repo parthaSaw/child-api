@@ -5,6 +5,10 @@ var checkAuth = require('./auth')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/health',(req,res)=>{
+    res.send({"msg":"CHILD OK"})
+})
+
 app.get('/s1', checkAuth,(req, res) => {
     res.send("DATA FROM S1")
 })
